@@ -1,0 +1,5 @@
+__pycache__
+.vscode
+migrations
+venv_bjorn_todoapp
+*.sqlite3
