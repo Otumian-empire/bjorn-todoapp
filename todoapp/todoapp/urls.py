@@ -22,8 +22,8 @@ from client.views import create_client_view
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('auth/token/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
-    path('auth/token/refresh/', TokenRefreshView.as_view(), name='token_refresh'),
-    path('account/', create_client_view, name="client"),
+    path('signup/', create_client_view, name="client"),
+    path('login/', TokenObtainPairView.as_view(), name='token_obtain_pair'),
+    path('auth/fresh', TokenRefreshView.as_view(), name='token_refresh'),
     path('', include('todos.urls'))
 ]
